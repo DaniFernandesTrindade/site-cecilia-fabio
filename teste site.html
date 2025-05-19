@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cecília & Fábio - Nosso Casamento</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="hero">
+    <div class="overlay">
+      <h1>Cecília & Fábio</h1>
+      <p>Nosso Casamento - 20 de Setembro de 2025</p>
+      <p class="countdown">Faltam 150 dias</p>
+    </div>
+  </header>
+
+  <section id="historia">
+    <h2>Nossa História</h2>
+    <p>Desde o primeiro olhar em 2017, Cecília e Fábio sabiam que algo especial havia começado...</p>
+    <div class="galeria">
+      <img src="imagens/foto1.jpg" alt="Foto do casal 1">
+      <img src="imagens/foto2.jpg" alt="Foto do casal 2">
+      <video controls>
+        <source src="videos/video1.mp4" type="video/mp4">
+        Seu navegador não suporta vídeo.
+      </video>
+    </div>
+  </section>
+
+  <section id="cerimonia">
+    <h2>Detalhes da Cerimônia</h2>
+    <ul>
+      <li><strong>Data:</strong> 20 de setembro de 2025</li>
+      <li><strong>Hora:</strong> 16h</li>
+      <li><strong>Local:</strong> Espaço Jardim Encantado - Niterói, RJ</li>
+    </ul>
+    <div id="mapa">
+      <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450"></iframe>
+    </div>
+  </section>
+
+  <section id="presentes">
+    <h2>Lista de Presentes</h2>
+    <p>Com muito carinho, preparamos uma lista especial para quem desejar contribuir com o nosso novo lar.</p>
+    <a class="botao" href="https://www.tokstok.com.br/lista-de-casamento" target="_blank">Acessar lista de presentes</a>
+  </section>
+
+  <section id="carta-aos-noivos">
+    <h2>Carta aos Noivos</h2>
+    <p>Deixe uma mensagem especial para nós!</p>
+    <form action="/mensagens" method="POST">
+      <textarea name="mensagem" rows="4" placeholder="Sua mensagem..."></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section id="rsvp">
+    <h2>Confirmação de Presença</h2>
+    <form action="/confirmacao" method="POST">
+      <label for="nome">Nome Completo</label>
+      <input type="text" name="nome" required>
+      <label for="confirmacao">Confirmar presença?</label>
+      <select name="confirmacao">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <section id="album-colaborativo">
+    <h2>Álbum Colaborativo</h2>
+    <p>Compartilhe suas fotos do grande dia!</p>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="foto" accept="image/*" required>
+      <button type="submit">Enviar Foto</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Com amor, Cecília & Fábio</p>
+  </footer>
+</body>
+</html>
